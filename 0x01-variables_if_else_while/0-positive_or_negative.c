@@ -7,6 +7,7 @@
  * if true it runs, if not it goes to else and prints the statement
  *
  * Return: 0
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
