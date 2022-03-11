@@ -12,15 +12,17 @@
 int main(void)
 {
 	int alp;
-	int cap;
 
 	for (alp = 'a'; alp <= 'z'; alp++)
 	{
-		putchar(alp);
-	}
-	for (cap = 'A'; cap <= 'Z'; cap++)
-	{
-		putchar(cap);
+		if (alp == 'q' || alp == 'e')
+		{
+			break;
+		}
+		else
+		{
+			putchar(alp);
+		}
 	}
 	putchar('\n');
 	return (0);
