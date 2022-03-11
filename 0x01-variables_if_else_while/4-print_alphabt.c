@@ -15,14 +15,10 @@ int main(void)
 
 	for (alp = 'a'; alp <= 'z'; alp++)
 	{
-		if (alp == 'q' || alp == 'e')
-		{
-			break;
-		}
-		else
-		{
+	while (!(alp == 'e' && alp == 'q')
+			{
 			putchar(alp);
-		}
+			}
 	}
 	putchar('\n');
 	return (0);
