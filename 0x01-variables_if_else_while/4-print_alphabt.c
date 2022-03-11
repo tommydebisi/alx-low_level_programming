@@ -15,9 +15,13 @@ int main(void)
 
 	for (alp = 'a'; alp <= 'z'; alp++)
 	{
-		if (alp == 'e' || alp == 'q')
+		if (alp == 'e')
 		{
-			alp;
+			alp = 'e';
+		}
+		else if (alp == 'q')
+		{
+			alp = 'q';
 		}
 		else
 		{
