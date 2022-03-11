@@ -16,8 +16,15 @@ int main(void)
 	for (dig = 0; dig <= 9; dig++)
 	{
 		putchar(dig + '0');
+		if (dig == 9)
+		{
+			break;
+		}
+		else
+		{
 		putchar(',');
 		putchar(' ');
+		}
 	}
 	return (0);
 }
