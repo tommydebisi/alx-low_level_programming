@@ -17,6 +17,5 @@ int main(void)
 	{
 		putchar(dig', ');
 	}
-	putchar('\n');
 	return (0);
 }
