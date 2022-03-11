@@ -11,11 +11,11 @@
 
 int main(void)
 {
-	char a[25];
+	int alp;
 
-	for (a = 'a'; a <= 'z';	c++)
+	for (alp = 'a'; alp <= 'z'; alp++)
 	{
-		putchar(a);
+		putchar(alp);
 	}
 	return (0);
 }
