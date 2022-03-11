@@ -18,7 +18,7 @@ int main(void)
 	{
 		putchar(dig + '0');
 	}
-	for (alp = 'a'; alp <= 'z'; alp++)
+	for (alp = 'a'; alp <= 'f'; alp++)
 	{
 		putchar(alp);
 	}
