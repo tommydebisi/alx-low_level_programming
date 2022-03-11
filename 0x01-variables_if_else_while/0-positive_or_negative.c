@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+
 /**
  * main - prints the conditional if statements
  * Description: the main function processes the if loop,
@@ -8,7 +8,7 @@
  *
  * Return: 0
  */
-/* betty style doc for function main goes there */
+
 int main(void)
 {
 	int n;
@@ -18,15 +18,15 @@ int main(void)
 
 	if (n > 0)
 	{
-		printf("%d is postive\n", n);
+		printf("%lli is postive\n", n);
 	}
 	else if (n == 0)
 	{
-		printf("%d is zero\n", n);
+		printf("%lli is zero\n", n);
 	}
 	else
 	{
-		printf("%d is negative\n", n);
+		printf("%lli is negative\n", n);
 	} /* your code goes there */
 	return (0);
 }
