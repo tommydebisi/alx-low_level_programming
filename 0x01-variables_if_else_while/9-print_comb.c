@@ -18,7 +18,7 @@ int main(void)
 		putchar(dig + '0');
 		if (dig == 9)
 		{
-			putchar(' ');
+			putchar('\n');
 			break;
 		}
 		else
