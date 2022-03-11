@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
  * main - prints the conditional if statements
@@ -18,15 +19,15 @@ int main(void)
 
 	if (n > 0)
 	{
-		printf("%lli is postive\n", n);
+		printf("%d is postive\n", n);
 	}
 	else if (n == 0)
 	{
-		printf("%lli is zero\n", n);
+		printf("%d is zero\n", n);
 	}
 	else
 	{
-		printf("%lli is negative\n", n);
-	} /* your code goes there */
+		printf("%d is negative\n", n);
+	}
 	return (0);
 }
