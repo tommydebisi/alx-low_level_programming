@@ -1,38 +1,37 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * main - prints out the conditionals
- *
- * Description: main function goes to the
- * code and executes the loops
- * Return: 0
+ * main - Prints numbers between 00 to 89.
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int dig1;
-	int dig2;
+	int i, e;
 
-	while (dig1 < 10)
+	i = 48;
+	e = 48;
+
+	while (e < 58)
 	{
-		dig1 = 0;
-		while (dig2 < 10)
+		i = 48;
+		while (i < 58)
 		{
-			dig2 = 0;
-			if ((dig1 != dig2) && (dig1 < dig2))
+			if (e != i && e < i)
 			{
-				putchar(dig1 + '0');
-				putchar(dig2 + '0');
-				if ((dig1 == 8) && (dig2 == 9))
+				putchar(e);
+				putchar(i);
+				if (e == 56 && e == 57)
 				{
 					break;
 				}
 				putchar(',');
 				putchar(' ');
 			}
-			dig2++;
+			i++;
 		}
-		dig1++;
+		e++;
 	}
 	putchar('\n');
 	return (0);
