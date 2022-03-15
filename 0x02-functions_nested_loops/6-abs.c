@@ -12,7 +12,7 @@ int _abs(int i)
 {
 	if (i < 0)
 	{
-		int result = i * -1
+		i *= -1
 	}
-	return (result);
+	return (i);
 }
