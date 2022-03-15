@@ -4,15 +4,15 @@
 /**
  *  _abs - _abs prints the absolute value
  *  of an integer
- * @int: gives the result of absolute value
+ * @i: gives the result of absolute value
  *
- * Return: @int for the result of the function
+ * Return: @result for the result of the function
  */
-int _abs(int)
+int _abs(int i)
 {
-	if (int < 0)
+	if (i < 0)
 	{
-		int = int * -1
+		int result = i * -1
 	}
-	return (int);
+	return (result);
 }
