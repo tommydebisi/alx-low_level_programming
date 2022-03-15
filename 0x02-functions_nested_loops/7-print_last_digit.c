@@ -6,7 +6,7 @@
  *  of an integer
  * @i: gives the integer input
  *
- * Return: @i for the result of the function
+ * Return: @n for the result of the function
  */
 int print_last_digit(int i)
 {
@@ -14,7 +14,11 @@ int print_last_digit(int i)
 	{
 		i = -i;
 	}
-	i %= 10;
-	_putchar(i + '0');
-	return (i);
+	n = i % 10;
+	if (n < 0)
+	{
+		n = -n
+	}
+	_putchar(n + '0');
+	return (n);
 }
