@@ -2,9 +2,8 @@
 #include "main.h"
 
 /**
- * main - prints the character in putchar
+ * print_alphabet - prints the character in putchar
  *
- * Return: 0
  */
 void print_alphabet(void)
 {
@@ -17,5 +16,4 @@ void print_alphabet(void)
 		alp++;
 	}
 	_putchar('\n');
-	return (0);
 }
