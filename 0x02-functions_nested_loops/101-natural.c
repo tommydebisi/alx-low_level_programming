@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - main function entry point
+ * main - prints the sum of multiples 3 and 5
  *
  * Return: 0
  */
