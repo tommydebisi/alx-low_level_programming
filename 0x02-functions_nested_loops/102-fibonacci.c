@@ -24,7 +24,7 @@ int main(void)
 		{
 			printf("%lu\n", term1);
 		}
-		sum = term1 + term2
+		sum = term1 + term2;
 		term1 = term2;
 		term2 = sum;
 	}
