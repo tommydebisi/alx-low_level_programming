@@ -28,4 +28,5 @@ int main(void)
 		term1 = term2;
 		term2 = sum;
 	}
+	return (0);
 }
