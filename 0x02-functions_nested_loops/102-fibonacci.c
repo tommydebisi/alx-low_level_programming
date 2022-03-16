@@ -14,9 +14,9 @@ int main(void)
 
 	term2 = 2;
 
-	for (n = 0; n < 51; n++)
+	for (n = 0; n < 50; n++)
 	{
-		if (n != 50)
+		if (n != 49)
 		{
 			printf("%lu, ", term1);
 		}
