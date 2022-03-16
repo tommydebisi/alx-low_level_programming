@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	long int term1, term2, n, sum;
+	unsigned long long int term1, term2, n, sum;
 
 	term1 = 1;
 
