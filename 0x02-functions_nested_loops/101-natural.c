@@ -8,7 +8,7 @@
 int main(void)
 {
 	int sum5 = 0, num;
-	int sum3 = 0;
+	int sum3 = 0, result;
 
 	for (num = 0; num < 1024; num++)
 	{
@@ -21,7 +21,7 @@ int main(void)
 			sum3 += num;
 		}
 	}
-	int result = sum3 + sum5;
+	result = sum3 + sum5;
 
 	printf("%d\n", result);
 	return (0);
