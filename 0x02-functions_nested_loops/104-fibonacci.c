@@ -28,6 +28,5 @@ int main(void)
 		term1 = term2;
 		term2 = sum;
 	}
-	printf("\n");
 	return (0);
 }
