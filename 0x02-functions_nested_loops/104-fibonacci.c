@@ -18,7 +18,7 @@ int main(void)
 	{
 		if (n != 97)
 		{
-			prinitf("%lu, ", term1);
+			printf("%lu, ", term1);
 		}
 		else
 		{
