@@ -16,7 +16,7 @@ int main(void)
 
 	result = 0;
 
-	for (n = 0; n < 10; n++)
+	for (n = 0; n < 34; n++)
 	{
 		if (term1 % 2  == 0)
 		{
