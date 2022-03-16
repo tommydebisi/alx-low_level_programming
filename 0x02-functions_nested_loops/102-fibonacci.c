@@ -16,15 +16,15 @@ int main(void)
 
 	for (n = 0; n < 51; n++)
 	{
-		sum = term1 + term2;
 		if (n != 50)
 		{
-			printf("%lu, ", sum);
+			printf("%lu, ", term1);
 		}
 		else
 		{
-			printf("%lu,\n", sum);
+			printf("%lu\n", term1);
 		}
+		sum = term1 + term2
 		term1 = term2;
 		term2 = sum;
 	}
