@@ -42,7 +42,7 @@ void times_table(void)
 			}
 			col++;
 		}
-		putchar('\n');
+		_putchar('\n');
 		row++;
 	}
 }
