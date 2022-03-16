@@ -19,7 +19,7 @@ int main(void)
 		sum = term1 + term2;
 		if (n != 50)
 		{
-			printf("%u, ", sum);
+			printf("%lu, ", sum);
 		}
 		else
 		{
