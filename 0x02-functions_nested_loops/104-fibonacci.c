@@ -18,11 +18,11 @@ int main(void)
 	{
 		if (n != 97)
 		{
-			printf("%lu, ", term1);
+			printf("%llu, ", term1);
 		}
 		else
 		{
-			printf("%lu\n", term1);
+			printf("%llu\n", term1);
 		}
 		sum = term1 + term2;
 		term1 = term2;
