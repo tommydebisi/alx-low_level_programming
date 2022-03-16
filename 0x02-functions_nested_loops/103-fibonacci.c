@@ -14,6 +14,8 @@ int main(void)
 
 	term2 = 2;
 
+	result = 0;
+
 	for (n = 0; n < 10; n++)
 	{
 		if (term1 % 2  == 0)
