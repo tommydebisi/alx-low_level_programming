@@ -1,9 +1,8 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - it prints the first 50 numbers from
+ * main - it prints the first 98 numbers from
  * one and two
  * Return: 0
  */
@@ -15,9 +14,9 @@ int main(void)
 
 	term2 = 2;
 
-	for (n = 0; n < 99; n++)
+	for (n = 0; n < 98; n++)
 	{
-		if (n != 98)
+		if (n != 97)
 		{
 			printf("%lu, ", term1);
 		}
@@ -29,5 +28,6 @@ int main(void)
 		term1 = term2;
 		term2 = sum;
 	}
+	printf("\n");
 	return (0);
 }
