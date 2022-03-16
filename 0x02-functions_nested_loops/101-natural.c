@@ -21,7 +21,8 @@ int main(void)
 			sum3 += num;
 		}
 	}
-	printf("%d\n", sum3);
-	printf("%d\n", sum5);
+	int result = sum3 + sum5;
+
+	printf("%d\n", result);
 	return (0);
 }
