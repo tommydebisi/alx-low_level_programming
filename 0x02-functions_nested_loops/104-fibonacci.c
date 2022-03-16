@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	unsigned long long int term1, term2, n, sum;
+	unsigned long int term1, term2, n, sum;
 
 	term1 = 1;
 
@@ -18,11 +18,11 @@ int main(void)
 	{
 		if (n != 97)
 		{
-			printf("%llu, ", term1);
+			prinitf("%lu, ", term1);
 		}
 		else
 		{
-			printf("%llu\n", term1);
+			printf("%lu\n", term1);
 		}
 		sum = term1 + term2;
 		term1 = term2;
