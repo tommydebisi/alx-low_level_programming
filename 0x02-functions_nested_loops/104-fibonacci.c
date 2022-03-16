@@ -15,9 +15,9 @@ int main(void)
 
 	term2 = 2;
 
-	for (n = 0; n < 98; n++)
+	for (n = 0; n < 99; n++)
 	{
-		if (n != 97)
+		if (n != 98)
 		{
 			printf("%lu, ", term1);
 		}
