@@ -15,7 +15,7 @@ if (n > 0)
 int j;
 
 j = n - 1;
-for (i = 0; i < j; i++)
+for (i = 0; i <= j; i++)
 {
 _putchar(' ');
 }
