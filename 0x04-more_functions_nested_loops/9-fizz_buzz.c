@@ -10,30 +10,24 @@ int main(void)
 {
 	int num;
 
-	char f[4], b[4], fb[8];
-
-	f = "Fizz";
-	b = "Buzz";
-	fb = "FizzBuzz";
-
 	for (num = 1; num <= 100; num++)
 	{
 		if (num % 3 == 0)
 		{
-			printf("%s ", f);
+			printf("Fizz ");
 		}
 		else if (num % 5 == 0)
 		{
 			if (num == 100)
 			{
-				printf("%s\n", b);
+				printf("Buzz\n");
 				break;
 			}
-			printf("%s ", b);
+			printf("Buzz ");
 		}
 		else if (num % 3 == 0 && num % 5 == 0)
 		{
-			printf("%s ", fb);
+			printf("FizzBuzz ");
 		}
 		printf("%d ", num);
 	}
