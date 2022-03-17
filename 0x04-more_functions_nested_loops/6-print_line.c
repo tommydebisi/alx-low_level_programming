@@ -8,19 +8,17 @@
 
 void print_line(int n)
 {
-int num = 0;
-
-for (num = 0; num <= 11; num++)
+for (n = 0; n <= 11; n++)
 {
-if (num <= 0)
+if (n <= 0)
 {
 _putchar('\n');
 break;
 }
-else if (num > 0)
+else if (n > 0)
 {
 _putchar('_');
-if (num == 10)
+if (n == 10)
 {
 _putchar('\n');
 }
