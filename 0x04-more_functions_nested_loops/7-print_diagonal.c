@@ -15,12 +15,12 @@ if (n > 0)
 k = n - 1;
 for (i = 0; i < n; i++)
 {
-for (j = 0; j < k; j++)
+for (j = 0; j < n - 1; j++)
 {
 _putchar(' ');
 }
 _putchar('\\');
-_putchar('\n')
+_putchar('\n');
 }
 }
 else
