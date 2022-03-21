@@ -15,13 +15,10 @@ sub = n - 1;
 for (num = 0; num < n; num++)
 {
 printf("%d", *(a + num));
-if (num == sub)
-{
-printf("\n");
-}
-else
+if (num != sub)
 {
 printf(", ");
 }
 }
+printf("\n");
 }
