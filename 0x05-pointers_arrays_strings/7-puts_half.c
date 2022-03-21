@@ -7,17 +7,27 @@
 
 void puts_half(char *str)
 {
-int len = 0, last;
+int len = 0, even, odd, j;
 while (str[len] != '\0')
 {
 len++;
 }
 /*printf("len is: %d\n", len);*/
-last = len / 2;
-while (str[last] != '\0')
+if (len % 2 == 0)
 {
-_putchar(str[last]);
-last++;
+even = len / 2;
+j = even;
+}
+else
+{
+odd = (len - 1) / 2;
+j = odd;
+}
+
+while (str[j] != '\0')
+{
+_putchar(str[j]);
+j++;
 }
 _putchar('\n');
 }
