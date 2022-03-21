@@ -3,8 +3,9 @@
 
 /**
  * *_strcpy - prints an array with size given
- * @dest: character to be inputed
+ * @src: character to be inputed
  * @dest: other character to be inputted
+ * Return: dest
  */
 
 char *_strcpy(char *dest, char *src)
@@ -13,9 +14,9 @@ int len;
 
 for (len = 0; *(src + len) != '\0'; len++)
 {
-*dest = *(src + len);
+dest[len] = *(src + len);
 }
-dest
+dest[len] = '\0';
 return (dest);
 }
 
