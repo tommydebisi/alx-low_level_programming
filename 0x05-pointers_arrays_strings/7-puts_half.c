@@ -17,7 +17,7 @@ break;
 len++;
 }
 /*printf("len is: %d\n", len);*/
-if (len % 2 == 1)
+if (len % 2 == 0)
 {
 even = len / 2;
 j = even;
