@@ -13,7 +13,7 @@ while (str[len] != '\0')
 len++;
 }
 /*printf("len is: %d\n", len);*/
-if (len % 2 == 0)
+if (len % 2 == 1)
 {
 even = len / 2;
 j = even;

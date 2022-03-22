@@ -11,8 +11,11 @@ int len = 0;
 
 while (str[len] != '\0')
 {
+if (len % 2 == 0)
+{
 _putchar(str[len]);
-len += 2;
+}
+len++;
 }
 _putchar('\n');
 }
