@@ -1,37 +1,27 @@
 #include "main.h"
 
 /**
- * puts_half - funtion that prints half the values
- * @str: character to be inputed
+ * puts_half - prints half of a string.
+ * @str: input string.
+ * Return: no return.
  */
-
 void puts_half(char *str)
 {
-int len = 0, even, odd, j;
-while (len >= 0)
-{
-if (str[len] == '\0')
-{
-break;
-}
-len++;
-}
-/*printf("len is: %d\n", len);*/
-if (len % 2 == 0)
-{
-even = len / 2;
-j = even;
-}
-else
-{
-odd = (len - 1) / 2;
-j = odd;
-}
+	int count = 0, i;
 
-while (str[j] != '\0')
-{
-_putchar(str[j]);
-j++;
-}
-_putchar('\n');
+	while (count >= 0)
+	{
+		if (str[count] == '\0')
+			break;
+		count++;
+	}
+
+	if (count % 2 == 1)
+		i = count / 2;
+	else
+		i = (count - 1) / 2;
+
+	for (i++; i < count; i++)
+		_putchar(str[i]);
+	_putchar('\n');
 }
