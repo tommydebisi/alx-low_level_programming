@@ -8,8 +8,12 @@
 void puts_half(char *str)
 {
 int len = 0, even, odd, j;
-while (str[len] != '\0')
+while (len >= 0)
 {
+if (str[len] == '\0')
+{
+break;
+}
 len++;
 }
 /*printf("len is: %d\n", len);*/
