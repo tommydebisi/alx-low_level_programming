@@ -20,6 +20,10 @@ len1++;
 for (len2 = 0; len2 < n; len2++, len1++)
 {
 /*adds each character string of src printed to dest*/
+if (src[len2] == '\0')
+{
+break;
+}
 dest[len1] = src[len2];
 }
 /* to seal off the string */
