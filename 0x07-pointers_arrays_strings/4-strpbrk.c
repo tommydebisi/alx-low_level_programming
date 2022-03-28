@@ -16,20 +16,13 @@ char *_strpbrk(char *s, char *accept)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		/*loop through accept and check if any character equal to s*/
-		for (j = 0; accept[j] != '\0'; j++)
+		for (j = 0; accept[j] >= '\0'; j++)
 		{
 			if (s[i] == accept[j])
 			{
-				break;
+				return (&s[i]);
 			}
 		}
-		if (s[i] == accept[j])
-		{
-			break;
-		}
 	}
-	if (s[i] != accept[j])
-		return ('\0');
-	else
-		return (&s[i]);
+	return ('\0');
 }
