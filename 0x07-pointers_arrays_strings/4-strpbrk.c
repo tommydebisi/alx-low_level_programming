@@ -13,10 +13,10 @@ char *_strpbrk(char *s, char *accept)
 	int i, j;
 
 	/*loop through s*/
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i]; i++)
 	{
 		/*loop through accept and check if any character equal to s*/
-		for (j = 0; accept[j] >= '\0'; j++)
+		for (j = 0; accept[j]; j++)
 		{
 			if (s[i] == accept[j])
 			{
