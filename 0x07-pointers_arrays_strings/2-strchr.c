@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 	int i;
 
 	/*loop through and get the first occurence*/
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] >= '\0'; i++)
 	{
 		/*if gotten the first occurence return the address*/
 		if (s[i] == c)
@@ -22,5 +22,5 @@ char *_strchr(char *s, char c)
 		}
 	}
 	/*if after going through the loop there's no occurence of c return NULL*/
-	return (0);
+	return ('\0');
 }
