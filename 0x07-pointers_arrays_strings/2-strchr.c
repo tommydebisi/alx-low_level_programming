@@ -22,5 +22,5 @@ char *_strchr(char *s, char c)
 		}
 	}
 	/*if after going through the loop there's no occurence of c return NULL*/
-	return ('\0');
+	return (0);
 }
