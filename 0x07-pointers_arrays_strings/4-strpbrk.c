@@ -28,5 +28,8 @@ char *_strpbrk(char *s, char *accept)
 			break;
 		}
 	}
-	return (&s[i]);
+	if (s[i] != accept[j])
+		return ('\0');
+	else
+		return (&s[i]);
 }
