@@ -9,9 +9,9 @@ void _puts_recursion(char *s)
 	/*using the tail recursion to imitate loop*/
 	if (*s == '\0')
 	{
-		_putchar('\n');
+		putchar('\n');
 		return;
 	}
-	_putchar(*s);
-	_puts_recursion(++s);
+	putchar(*s);
+	_puts_recursion(s + 1);
 }
