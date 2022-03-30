@@ -1,32 +1,46 @@
 #include "main.h"
-
+#include <string.h>
 /**
-* _strstr - function locate
-* @haystack: pointer to char
-* @needle: pointer to char
-* Return: 0
-*/
+ * _strstr - prints the first occurence of subset string
+ * @haystack: character to be compared with
+ * @needle: character to be inputted
+ * Return: 
+ */
 
 char *_strstr(char *haystack, char *needle)
 {
-	char *result = haystack, *fneedle = needle;
+	/*Declare variable to be used in loop*/
+	int i, j, good = 0;
 
-	while (*haystack)
+	int len = 0;
+	while (needle[len] != '\0')
 	{
-		while (*needle)
+		len++;
+	}
+	/*run through the string haystack*/
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		/*run through string needle*/
+		for (j = 0; needle[j] != '\0'; j++, i++)
 		{
-			if (*haystack++ != *needle++)
+			if (haystack[i] == needle[j])
+			{
+				good += 1;
+			}
+			else
 			{
 				break;
 			}
 		}
-		if (!*needle)
-		{
-			return (result);
+		if (good == len)
+			{
+			return (&haystack[i - good]);
 		}
-		needle = fneedle;
-		result++;
-		haystack = result;
+		else
+		{
+			good = 0;
+		}
 	}
-	return (0);
+	/*if the program reaches here it means the condition isn't satisified*/
+	return ('\0');
 }
