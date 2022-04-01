@@ -5,17 +5,12 @@
  * @argv: holds the string values of the things enter on command line
  * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]__attribute__((unused)))
 {
-	/*Declare variable to be used in loop*/
-	int i = 0;
-
-	while (i < argc)/*keep the loop running till i exceedes argc*/
-	{
-		i++;
-		argv++;
-	}
-	i--;
-	printf("%d\n", i);
+	/**
+	 * attribute unused tells the compiler the char is not used
+	 * so it shouldn't give error
+	 */
+	printf("%d\n", (argc - 1));/*to get the index of argv*/
 	return (0);
 }
