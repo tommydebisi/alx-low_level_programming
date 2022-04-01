@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	/*Declare variables for the loop and addition*/
 	int result = 0, row, col;
-	
+
 	if (argc == 1)/*if the command argument is 1*/
 	{
 		printf("0\n");
