@@ -1,2 +1,2 @@
-> ## BEGININNIG OF STATIC LIBRARY TASKS
+> ## BEGININNING OF STATIC LIBRARY TASKS
 >> *Aim is to create our own static library*
