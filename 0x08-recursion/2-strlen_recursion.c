@@ -11,5 +11,5 @@ int _strlen_recursion(char *s)
 	if (*s == '\0')
 		return (0);
 	else/*keep on adding 1 till s is null to return the values back*/
-		return (1 + _strlen_recursion(s + 1));
+		return (1 + _strlen_recursion((s + 1)));
 }
