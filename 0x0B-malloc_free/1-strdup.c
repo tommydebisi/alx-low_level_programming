@@ -11,7 +11,7 @@ char *_strdup(char *str)
 
 	char *ptr;
 
-	if (str == NULL)
+	if (*str == '\0')
 		return (NULL);
 	/*need to know the size of string*/
 	while (*(str + i) != '\0')
