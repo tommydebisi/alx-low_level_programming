@@ -1,10 +1,11 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * alloc_grid -
+ * alloc_grid - allocates specific number of grid
+ * width and height
  * @width: size of width
  * @height: size of height
- * Return: 
+ * Return: ptr
  */
 
 int **alloc_grid(int width, int height)
@@ -28,8 +29,10 @@ int **alloc_grid(int width, int height)
 		if (ptr[i] == NULL)
 		{
 			/*if the memory wasn't created*/
-			free (ptr);
-			free (ptr[i]);
+			free(ptr);
+			/*to free the memory in each row i.e the columns*/
+			for (j = 0; j <= i; j++)/*to free space for each column w.r.t i*/
+				free(ptr[j]);
 			return (NULL);
 		}
 	}
