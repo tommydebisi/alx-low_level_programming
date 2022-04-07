@@ -38,8 +38,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len2 = str_lent(s2);
 	if (n >= len2)
 		len2 = n;
-	tot_len = len1 + n + 1;/*adding the length of 1st string and n given above*/
-	ptr = (char *)malloc(sizeof(char) * tot_len);
+	tot_len = len1 + n;/*adding the length of 1st string and n given above*/
+	ptr = (char *)malloc(sizeof(char) * tot_len + 1);
 	if (ptr == NULL)
 		return (NULL);
 	/*loop to add two strings to the memory*/
