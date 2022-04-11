@@ -10,7 +10,7 @@ void print_dog(struct dog *d)
 {
 	/*keying in requirements*/
 	if (d == NULL)
-		exit(1);/*exits the function without printing anything*/
+		return;/*exits the function without printing anything*/
 	if (d->name == NULL)
 		d->name = "(nil)";/*sets the value of name if cond. is true*/
 	if (d->owner == NULL)
