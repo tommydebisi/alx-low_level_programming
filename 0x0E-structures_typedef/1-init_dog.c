@@ -1,7 +1,7 @@
 #include "dog.h"
 
 /**
- * init_dog -
+ * init_dog - initializing members of struct
  * @d: struct created
  * @name: pointer to string
  * @age: float value
@@ -10,7 +10,7 @@
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	/*initializing struct*/
-	d -> name = name;/*we setting the pointer to the string address*/
-	d -> age = age;
-	d -> owner = owner;
+	d->name = name;/*we setting the pointer to the string address*/
+	d->age = age;
+	d->owner = owner;
 }
