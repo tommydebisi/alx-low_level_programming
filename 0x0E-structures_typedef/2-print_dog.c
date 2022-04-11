@@ -3,14 +3,14 @@
 #include "dog.h"
 
 /**
- * print-dog - prints struct members to stdout
+ * print_dog - prints struct members to stdout
  * @d: pointer to struct
  */
 void print_dog(struct dog *d)
 {
 	/*keying in requirements*/
 	if (d == NULL)
-		return;/*exits the function without printing anything*/
+		exit(0);/*exits the function without printing anything*/
 	if (d->name == NULL)
 		d->name = "(nil)";/*sets the value of name if cond. is true*/
 	if (d->owner == NULL)
