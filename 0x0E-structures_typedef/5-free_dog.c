@@ -6,11 +6,11 @@
  */
 void free_dog(dog_t *d)
 {
-	if (d)
+	if (d != NULL)
 	{
-		/*free the malloc created generally the for strings*/
-		free(d);
-		free(d->name);
+		/*free the malloc created in ascending order*/
 		free(d->owner);
+		free(d->name);
+		free(d);
 	}
 }
