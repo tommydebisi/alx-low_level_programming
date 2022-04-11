@@ -65,7 +65,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	ptr->owner = (char *)malloc(sizeof(char) * (len2 + 1));/*added 1 bcos of \0*/
-	if (ptr->name == NULL)
+	if (ptr->owner == NULL)
 	{
 		free(ptr);
 		free(ptr->name);/*freeing accordingly, if one malloc fails the rest fails*/
