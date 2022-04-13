@@ -14,7 +14,7 @@ void print_name(char *name, void (*f)(char *str))
 	int len;
 	char *ptr;
 	/*checking if name is not null*/
-	if (name == NULL)
+	if (name == NULL && f == NULL)
 		return;
 	/*getting string length*/
 	len = strlen(name);
