@@ -14,9 +14,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	/*declare variables and macro to be used*/
 	unsigned int i, num;
 	va_list arg;
-	/*key in requirements*/
-	if (separator == NULL)
-		return;
 	/*initializing va_list with n to know the number of arguments*/
 	va_start(arg, n);
 	/*looping through and printing the values*/
