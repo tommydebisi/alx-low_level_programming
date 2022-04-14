@@ -25,12 +25,12 @@ int main(int argc, char *argv[])
 	/*initialize num1 and num2 with argv[1 and 3]*/
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	st = (argv[2]);
-	if (!get_op_func(st))
+	st = (argv[2]);/*set address st to arv[2]*/
+	if (!get_op_func(st))/*if argument st is NULL*/
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", get_op_func(st)(num1, num2));
+	printf("%d\n", get_op_func(st)(num1, num2));/*print result of func.*/
 	return (0);
 }

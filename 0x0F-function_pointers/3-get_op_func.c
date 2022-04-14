@@ -22,8 +22,8 @@ int (*get_op_func(char *s))(int, int)
 	/* go through struct array and check operator*/
 	while (i < 5)
 	{
-		if (strcmp(ops[i].op, s) == 0)
-			return (ops[i].f);
+		if (strcmp(ops[i].op, s) == 0)/*compare two pointers*/
+			return (ops[i].f);/*returning result of the function*/
 		i++;
 	}
 	return (NULL);
