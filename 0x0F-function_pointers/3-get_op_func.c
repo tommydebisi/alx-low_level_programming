@@ -19,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 	/* go through struct array and check operator*/
-	while (i < 5)
+	while (i < 6)
 	{
 		if (*s == *ops[i].op)
 			return (ops[i].f);
