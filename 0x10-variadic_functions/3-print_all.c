@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 {
 	/*declare vairables to be used and va_list*/
 	int i = 0, d = 0, j;
-	char *s, str[] = "cifs";
+	const char *s, str[] = "cifs";
 	va_list arg;
 	/*getting the length of string specifier*/
 	va_start(arg, format);
