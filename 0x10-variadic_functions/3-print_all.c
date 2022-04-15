@@ -11,16 +11,14 @@
 void print_all(const char * const format, ...)
 {
 	/*declare vairables to be used and va_list*/
-	int i = 0, j = 0, len;
+	int i = 0, j = 0, len = strlen(format);
 	char *s;
 	const char str[5] = {'c', 'i', 'f', 's', '\0'};
 	va_list arg;
 	/*getting the length of string specifier*/
-	len = strlen(format);
 	va_start(arg, format);
 	while (format[i] && format)/*format is not NULL and not \0*/
 	{
-		
 		switch (format[i])
 		{
 			case 'c':
@@ -34,7 +32,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(arg, char *);
-				if(!s)
+				if (!s)
 					printf("(nil)");
 				else
 					printf("%s", s);
