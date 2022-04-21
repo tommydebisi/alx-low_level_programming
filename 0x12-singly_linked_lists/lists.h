@@ -1,6 +1,9 @@
 #ifndef _LISTS_H_
 #define _LISTS_H_
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 /**
  * struct node - struct with three members
  * @str: pointer to string
@@ -12,10 +15,11 @@ typedef struct node
 {
 	char *str;
 	int len;
-	struct node *next
+	struct node *next;
 } list_t;
 
 /*Prototypes*/
+int _putchar(char c);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
