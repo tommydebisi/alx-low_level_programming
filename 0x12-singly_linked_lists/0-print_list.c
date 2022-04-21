@@ -1,7 +1,7 @@
 #include "lists.h"
 
-/*8
- * size_t - prints all the elements
+/**
+ * print_list - prints all the elements
  * @h: pointer to a struct
  * Return: number of elements printed
  */
