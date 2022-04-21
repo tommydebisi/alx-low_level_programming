@@ -5,10 +5,10 @@
 
 ## TASKS
 <ol>
-<li> **PRINT LIST** </li>
-<li> **LIST LENGTH** </li>
-<li> **ADD NODE** </li>
-<li> **ADD NODE AT THE END** </li>
-<li> **FREE LIST** </li>
+  <li> <b>PRINT LIST</b> </li>
+  <li> <b>LIST LENGTH</b> </li>
+<li> <b>ADD NODE</b> </li>
+  <li> <b>ADD NODE AT THE END</b> </li>
+  <li> <b>FREE LIST</b> </li>
 </ol>
 
