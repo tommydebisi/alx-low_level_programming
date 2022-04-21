@@ -13,9 +13,6 @@ list_t *add_node(list_t **head, const char *str)
 	/*declare variables to be used*/
 	list_t *ptr;
 	unsigned int len = 0;
-	/*check if str is not empty*/
-	if (*str == '\0')
-		return (NULL);
 	/* getting length of string*/
 	while (str[len] != '\0')
 		len++;
