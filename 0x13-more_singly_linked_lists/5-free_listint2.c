@@ -8,21 +8,21 @@
 void free_listint2(listint_t **head)
 {
 	/*declare variables to be used*/
-	listint_t *ptr;
+	listint_t *prev, *current;
 
-	ptr = *head;
+	prev = current = *head;
 	/*check if head is not NULL*/
 	if (head != NULL)
 	{
 		/*traverse the list and free head*/
-		while (ptr != NULL)
+		while (current != NULL)
 		{
 			/*move to the next address*/
-			ptr = ptr->next;
-			/*after moving free head*/
-			free(*head);
+			current = current->next;
+			/*after moving free prev*/
+			free(prev);
 			/*then set head to the next address*/
-			*head = ptr;
+			prev = current;
 		}
 		/*all the list have been freed set head to NULL*/
 		*head = NULL;
