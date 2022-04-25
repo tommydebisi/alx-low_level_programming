@@ -22,5 +22,5 @@ void free_listint2(listint_t **head)
 		*head = ptr;
 	}
 	/*all the list have been freed set head to NULL*/
-	*head = NULL;
+	head = NULL;
 }
