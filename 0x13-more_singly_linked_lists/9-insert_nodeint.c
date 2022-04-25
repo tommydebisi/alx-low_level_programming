@@ -13,6 +13,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/*declare variables to be used*/
 	unsigned int i = 1;/*i is 1 to enable to insert at exactly idx*/
 	listint_t *ptr, *new;
+	/*check if head is NULL*/
 	if (head != NULL)
 	{
 		/*set ptr to address of first node*/
