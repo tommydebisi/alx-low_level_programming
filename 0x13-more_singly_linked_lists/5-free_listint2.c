@@ -9,11 +9,10 @@ void free_listint2(listint_t **head)
 {
 	/*declare variables to be used*/
 	listint_t *prev, *current;
-
-	prev = current = *head;
 	/*check if head is not NULL*/
 	if (head != NULL)
 	{
+		prev = current = *head;
 		/*traverse the list and free head*/
 		while (current != NULL)
 		{
