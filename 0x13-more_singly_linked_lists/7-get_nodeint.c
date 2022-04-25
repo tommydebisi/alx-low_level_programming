@@ -11,17 +11,21 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	/*declare variables to be used*/
 	listint_t *ptr;
 	unsigned int i = 0;
-	/*set ptr to head*/
-	ptr = head;
-	/*traverse the loop and i times*/
-	while (i != index)
+	/*check if head is not NULL*/
+	if (head != NULL)
 	{
-		/*set ptr to the next address*/
-		ptr = ptr->next;
-		i++;
+		/*set ptr to head*/
+		ptr = head;
+		/*traverse the loop and i times*/
+		while (i != index)
+		{
+			/*set ptr to the next address*/
+			ptr = ptr->next;
+			i++;
+		}
+		/*check if node exists*/
+		if (ptr != NULL)
+			return (ptr);
 	}
-	/*check if node exists*/
-	if (ptr != NULL)
-		return (ptr);
 	return (NULL);
 }
