@@ -17,7 +17,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		/*set ptr to head*/
 		ptr = head;
 		/*traverse the loop and i times*/
-		while (i != index)
+		while (i != index && ptr != NULL)
 		{
 			/*set ptr to the next address*/
 			ptr = ptr->next;
