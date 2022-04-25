@@ -34,5 +34,5 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		/*we have reached the end of node, now attach new*/
 		ptr->next = new;
 	}
-	return (*head);
+	return (new);
 }
