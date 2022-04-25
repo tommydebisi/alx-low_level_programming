@@ -11,39 +11,43 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	/*declare variables to be used*/
-	unsigned int i = 1;/*i is 1 to enable to insert at exactly idx*/
+	unsigned int i;
 	listint_t *ptr, *new;
 	/*check if head is NULL*/
 	if (head != NULL)
 	{
 		/*set ptr to address of first node*/
 		ptr = *head;
+		/*check if idx is 0*/
+		if (idx != 0)
+		{
+			/*traverse the list till index is reached*/
+			for (i = 0; i < (idx - 1) && ptr != NULL; i++)
+				ptr = ptr->next;
+		}
+		/* check if ptr is empty*/
+		if (ptr == NULL)
+			return (NULL);
 		/*malloc space for new node*/
 		new = malloc(sizeof(listint_t));
 		if (new == NULL)
 		{
-			free(new);
 			return (NULL);
 		}
 		/*put values in new node*/
 		new->n = n;
 		new->next = NULL;
-		/*traverse the list till index is reached*/
-		while (i < idx && ptr != NULL)
-		{
-			ptr = ptr->next;
-			i++;
-		}
-		/* check if ptr is empty*/
-		if (ptr == NULL)
-		{
-			free(new);
-			return (NULL);
-		}
 		/*insert the list*/
+		if (idx == 0)
+		{
+			new->next = ptr;
+			*head = new;/*changes the first node to new*/
+			return (new);
+		}
+		/*if idx != 0*/
 		new->next = ptr->next;
 		ptr->next = new;
-		return (*head);
+		return (new);
 	}
 	return (NULL);
 }
