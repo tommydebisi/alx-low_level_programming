@@ -26,7 +26,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (1);
 	}
 	/*traverse the list and get to the index position*/
-	while (i != index)
+	while (i != index && *head != NULL)
 	{
 		previous = current;
 		current = current->next;
