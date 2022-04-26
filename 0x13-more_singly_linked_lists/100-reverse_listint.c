@@ -13,4 +13,22 @@ listint_t *reverse_listint(listint_t **head)
 	/*check if head is not NULL*/
 	if (*head == NULL)
 		return (NULL);
+	/*initialize pointers*/
+	current = *head;
+	prev = NULL;
+	/*loop through and reverse the list by updating address*/
+	while (*head != NULL)
+	{
+		/*set current to next address*/
+		current = current->next;
+		/*update the next address in node to previous*/
+		(*head)->next = prev;
+		/*set prev to the head address*/
+		prev = *head;
+		/*move head to the next address (current)*/
+		*head = current;
+	}
+	/* head is NULL set it to the prev address*/
+	*head = prev;
+	return (*head);
 }
