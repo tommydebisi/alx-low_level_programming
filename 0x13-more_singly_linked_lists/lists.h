@@ -21,7 +21,7 @@ typedef struct listint_s
 /**
  * struct listnode_s - singly linked list
  * @ptr: points to the list of value
- * @next: points to the list of node
+ * @next: points to the list of nodei address
  *
  * Description: singly linked list node structure
  */
@@ -50,7 +50,7 @@ size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
 
-
+/*used in advanced tasks*/
 size_t in_node(const listint_t *head, listnode_t *node);
 listnode_t *add_node(listnode_t **head, const listint_t *node);
 void free_nodes(listnode_t *node);
