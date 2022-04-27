@@ -8,8 +8,8 @@
 size_t free_listint_safe(listint_t **h)
 {
 	/*declare variables*/
-	listint_t *current, *prev;
-	listnode_t *node = NULL;
+	listint_t *current;
+	listnode_t *node = NULL;/*initialize address struct*/
 	size_t count = 0;
 
 	if (h == NULL)
@@ -23,13 +23,12 @@ size_t free_listint_safe(listint_t **h)
 			free_nodes(node);
 			exit(98);
 		}
-		current = prev = *h;
+		/*initialize current*/
+		current = *h;
 		/*move to the next address*/
-		current = current->next;
-		/*after moving free prev*/
-		free(prev);
-		/*then set prev to the next address*/
-		prev = current;
+		*h = (*h)->next;
+		/*after moving free current*/
+		free(current);
 		count++;
 	}
 	/*makes the head NULL after the loop*/
