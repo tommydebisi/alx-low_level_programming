@@ -71,7 +71,10 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		/*adding address to node and checking if it returns NULL*/
 		if (!add_node(&node, head))
+		{
+			free_nodes(node);
 			exit(98);
+		}
 		/*printout the value*/
 		printf("[%p] %d\n", (void *)head, head->n);
 		count++;
@@ -80,7 +83,7 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	/*check if there's loop*/
 	if (head != NULL)
-		printf("[%p] %d\n", (void *)head, head->n);
+		printf("-> [%p] %d\n", (void *)head, head->n);
 	free_nodes(node);
 	return (count);
 }
