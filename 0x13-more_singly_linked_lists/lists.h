@@ -50,4 +50,9 @@ size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
 
+
+size_t in_node(const listint_t *head, listnode_t *node);
+listnode_t *add_node(listnode_t **head, const listint_t *node);
+void free_nodes(listnode_t *node);
+
 #endif /*_LISTS_H_*/

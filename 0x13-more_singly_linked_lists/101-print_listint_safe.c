@@ -1,4 +1,37 @@
 #include "lists.h"
+
+/**
+ * print_listint_safe - prints a linked list
+ * @head: pointer to first node
+ * Return: Number of nodes
+ */
+
+size_t print_listint_safe(const listint_t *head)
+{
+	/*declare variables to be used*/
+	listnode_t *node = NULL;
+	size_t count = 0;
+	/*check if there's loop or NULL*/
+	while (!in_node(head, node))
+	{
+		/*adding address to node and checking if it returns NULL*/
+		if (!add_node(&node, head))
+		{
+			free_nodes(node);
+			exit(98);
+		}
+		/*printout the value*/
+		printf("[%p] %d\n", (void *)head, head->n);
+		count++;
+		/*move to next address in head*/
+		head = head->next;
+	}
+	/*check if there's loop*/
+	if (head != NULL)
+		printf("-> [%p] %d\n", (void *)head, head->n);
+	free_nodes(node);
+	return (count);
+}
 /**
  * in_node - compares the two structs if a node is similar
  * in address
@@ -54,36 +87,4 @@ void free_nodes(listnode_t *node)
 	/*free nodes using recursion*/
 	free_nodes(node->next);
 	free(node);
-}
-/**
- * print_listint_safe - prints a linked list
- * @head: pointer to first node
- * Return: Number of nodes
- */
-
-size_t print_listint_safe(const listint_t *head)
-{
-	/*declare variables to be used*/
-	listnode_t *node = NULL;
-	size_t count = 0;
-	/*check if there's loop or NULL*/
-	while (!in_node(head, node))
-	{
-		/*adding address to node and checking if it returns NULL*/
-		if (!add_node(&node, head))
-		{
-			free_nodes(node);
-			exit(98);
-		}
-		/*printout the value*/
-		printf("[%p] %d\n", (void *)head, head->n);
-		count++;
-		/*move to next address in head*/
-		head = head->next;
-	}
-	/*check if there's loop*/
-	if (head != NULL)
-		printf("-> [%p] %d\n", (void *)head, head->n);
-	free_nodes(node);
-	return (count);
 }
