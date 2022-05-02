@@ -10,13 +10,13 @@ void error_check(int fdfr, int fdto, char **av)
 	/* check if the file was read */
 	if (fdfr == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	/* check if file was written */
 	if (fdto == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 }
@@ -29,8 +29,8 @@ void error_check(int fdfr, int fdto, char **av)
 int main(int ac, char **av)
 {
 	/* Declare variables */
-	int numread = 1024, fdfr, fdto, clfr, clto;
-	char *buf;
+	int numread = 1024, numwrit, fdfr, fdto, clfr, clto;
+	char buf[1024];
 	/* check if arguments are correct */
 	if (ac != 3)
 	{
@@ -41,32 +41,28 @@ int main(int ac, char **av)
 	fdfr = open(av[1], O_RDONLY);
 	/* open and wrtie to file_to */
 	fdto = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	/* check for error */
 	error_check(fdfr, fdto, av);
-	/* mallocing space to buf */
-	buf = malloc(1024);
-	if (buf == NULL)
-		exit(0);
 	while (numread > 0)
 	{
 		/* read and give the number of char read */
 		numread = read(fdfr, buf, 1024);
+		/* check for error */
+		if (numread == -1)
+			error_check(-1, 0, av);
 		/* write to the file */
-		write(fdto, buf, numread);
+		numwrit = write(fdto, buf, numread);
+		/* check for error */
+		if (numwrit == -1)
+			error_check(0, -1, av);
 	}
 	clfr = close(fdfr);
 	/* check if file descriptor for read closes */
 	if (clfr == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", fdfr);
-		exit(100);
-	}
+		dprintf(2, "Error: Can't close fd %d", fdfr), exit(100);
 	/* check if file descriptor for write closes */
 	clto = close(fdto);
 	if (clto == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", fdto);
-		exit(100);
-	}
-	free(buf);
+		dprintf(2, "Error: Can't close fd %d", fdto), exit(100);
 	return (0);
 }
