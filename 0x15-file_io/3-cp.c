@@ -41,6 +41,7 @@ int main(int ac, char **av)
 	fdfr = open(av[1], O_RDONLY);
 	/* open and wrtie to file_to */
 	fdto = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	error_check(fdfr, fdto, av);
 	/* mallocing space to buf */
 	buf = malloc(1024);
 	if (buf == NULL)
