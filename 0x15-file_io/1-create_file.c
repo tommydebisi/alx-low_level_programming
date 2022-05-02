@@ -14,15 +14,16 @@ int create_file(const char *filename, char *text_content)
 	/* set requirements */
 	if (!filename)
 		return (-1);
-	/* open the file */
+	/* open the file and create if not there */
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
 	if (text_content)
 	{
-		/* loop through and  */
+		/* loop through and get length of string */
 		while (text_content[i] != '\0')
 			i++;
+		/* write to the file */
 		write(fd, text_content, i);
 	}
 	close(fd);
