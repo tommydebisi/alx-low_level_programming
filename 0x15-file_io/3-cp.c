@@ -34,7 +34,7 @@ int main(int ac, char **av)
 	/* check if arguments are correct */
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	/* open and read the file */
@@ -59,10 +59,10 @@ int main(int ac, char **av)
 	clfr = close(fdfr);
 	/* check if file descriptor for read closes */
 	if (clfr == -1)
-		dprintf(2, "Error: Can't close fd %d", fdfr), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdfr), exit(100);
 	/* check if file descriptor for write closes */
 	clto = close(fdto);
 	if (clto == -1)
-		dprintf(2, "Error: Can't close fd %d", fdto), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdto), exit(100);
 	return (0);
 }
