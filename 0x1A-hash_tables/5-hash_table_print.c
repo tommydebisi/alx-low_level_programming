@@ -11,18 +11,18 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	char *seperator = "";
 
-	printf("{");
-	if (ht)	/* hash_table is not empty */
+	if (!ht)	/* head is empty */
+		return;
+
+	printf("{");	/* head is not empty */
+	for (i = 0; i < ht->size; i++)
 	{
-		for (i = 0; i < ht->size; i++)
+		future = ht->array[i];
+		while (future)
 		{
-			future = ht->array[i];
-			while (future)
-			{
-				printf("%s\'%s\': \'%s\'", seperator, future->key, future->value);
-				future = future->next;
-				seperator = ", ";
-			}
+			printf("%s'%s': '%s'", seperator, future->key, future->value);
+			future = future->next;
+			seperator = ", ";
 		}
 	}
 	printf("}\n");
