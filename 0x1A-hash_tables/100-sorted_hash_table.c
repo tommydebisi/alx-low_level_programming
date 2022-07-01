@@ -100,7 +100,7 @@ int insert_sorted_dnode(shash_table_t **ht, shash_node_t *addr)
 		return (1);
 	}
 
-	if (addr->key[0] < (*ht)->shead->key[0])	/* insert at beginning */
+	if (strcmp(addr->key, (*ht)->shead->key) < 0)	/* insert at beginning */
 	{
 		addr->snext = (*ht)->shead;
 		(*ht)->shead->sprev = addr;
@@ -111,7 +111,7 @@ int insert_sorted_dnode(shash_table_t **ht, shash_node_t *addr)
 	future = (*ht)->shead, past = NULL;
 	while (future)
 	{
-		if (addr->key[0] < future->key[0])	/* insert in the middle */
+		if (strcmp(addr->key, future->key) < 0)	/* insert in the middle */
 		{
 			future->sprev->snext = addr;
 			addr->sprev = future->sprev;
