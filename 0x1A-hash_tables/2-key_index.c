@@ -4,7 +4,7 @@
  * key_index - gets the index of a key
  *
  * @key: the key to identified with
- * @size: sie of array
+ * @size: size of array
  * Return: key index
  */
 
