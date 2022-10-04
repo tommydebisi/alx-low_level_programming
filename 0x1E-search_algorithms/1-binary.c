@@ -15,15 +15,6 @@ int binary_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	/* check if size is 1 */
-	if (size == 1)
-	{
-		printArray(array, 0, size - 1);
-		if (array[size - 1] == value)
-			return (size - 1);
-		return (-1);
-	}
-
 	return (bSearchVal(array, 0, size - 1, value));
 }
 
@@ -42,14 +33,22 @@ int bSearchVal(int *array, size_t start, size_t end, int value)
 	int left = 0, right = 0;
 	size_t mid;
 
-	if (start >= end)
+	if (start > end)
 		return (-1);
+
+	/* if the size of array is an odd number */
+	if (end == 1)
+		end += 1;
 
 	printArray(array, start, end);
 	mid = (start + end) / 2;
 
 	if (array[mid] == value)
 		return (mid);
+
+	/* checks if first index is the only value in the array */
+	if ((start + end) == 0)
+		return (-1);
 
 	/* check L of mid and R of mid if greater or less than value */
 	if (array[mid - 1] > value)
