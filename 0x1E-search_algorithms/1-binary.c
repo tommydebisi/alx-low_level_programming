@@ -42,7 +42,7 @@ int bSearchVal(int *array, size_t start, size_t end, int value)
 	int left = 0, right = 0;
 	size_t mid;
 
-	if (start > end)
+	if (start >= end)
 		return (-1);
 
 	printArray(array, start, end);
