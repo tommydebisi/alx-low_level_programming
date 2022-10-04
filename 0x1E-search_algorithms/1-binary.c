@@ -38,11 +38,11 @@ int bSearchVal(int *array, size_t start, size_t end, int value)
 
 	printArray(array, start, end);
 	mid = (start + end) / 2;
-	printf("mid: %ld")
 
 	if (array[mid] == value)
 		return (mid);
 
+	/* check L of mid and R of mid if greater or less than value */
 	if (array[mid - 1] > value)
 		left = bSearchVal(array, start, mid - 1, value);
 	else
