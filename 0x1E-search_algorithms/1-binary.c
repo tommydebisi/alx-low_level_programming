@@ -50,8 +50,7 @@ int bSearchVal(int *array, size_t start, size_t end, int value)
 	if ((start + end) == 0)
 		return (-1);
 
-	/* check L of mid and R of mid if greater or less than value */
-	if (array[mid - 1] > value)
+	if (array[mid] > value)
 		left = bSearchVal(array, start, mid - 1, value);
 	else
 		right = bSearchVal(array, mid + 1, end, value);
